@@ -1,2 +1,6 @@
 Application.ensure_all_started(:hound)
+Application.ensure_all_started(:httpoison)
+Application.ensure_all_started(:floki)
+Application.ensure_all_started(:html5ever)
+Application.ensure_all_started(:fast_html)
 ExUnit.start()
