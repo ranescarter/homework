@@ -1,5 +1,6 @@
 # This file is responsible for configuring your application
 # and its dependencies with the aid of the Mix.Config module.
+
 use Mix.Config
 
 # This configuration is loaded before any dependency and is restricted
@@ -9,6 +10,10 @@ use Mix.Config
 # third-party users, it should be done in your "mix.exs" file.
 
 config :hound, driver: "chrome_driver"
+config :tesla, :adapter, Tesla.Adapter.Hackney
+# config :my_app_web, MyAppWeb.Endpoint, url: [host: "the-internet.herokuapp.com"]
+# config :phoenix, :json_library, Jason
+# config :floki, :html_parser, Floki.HTMLParser.Html5ever
 
 # You can configure your application as:
 #
@@ -30,3 +35,13 @@ config :hound, driver: "chrome_driver"
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env()}.exs"
+
+"""
+It appears that Mix.Config has been deprecated
+The following error is returned when running 'iex -S mix'
+warning: use Mix.Config is deprecated. Use the Config module instead
+https://hexdocs.pm/elixir/master/Config.html
+
+Using import Config is suggested as the preferred method
+https://hexdocs.pm/elixir/master/Config.html
+"""
